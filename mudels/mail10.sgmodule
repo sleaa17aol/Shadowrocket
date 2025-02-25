@@ -1,0 +1,10 @@
+#!name=Mail10
+#!desc=mail
+
+[Script]
+mail10 = type=http-response, pattern=api.qonversion.io/v1/user/init, script-path=https://raw.githubusercontent.com/sultan1sa/AllinOneRewrite-/main/10mail.js, requires-body=true, timeout=10
+
+apphud = type=http-response, pattern=https:\/\/api\.apphud\.com\/v1\/(subscriptions|customers), script-path=https://raw.githubusercontent.com/sultan1sa/AllinOneRewrite-/main/Apphud.js, requires-body=true, timeout=10
+
+[MITM]
+hostname = %APPEND% api.qonversion.io, api.apphud.com
